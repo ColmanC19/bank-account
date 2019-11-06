@@ -33,17 +33,19 @@ $(document).ready(function() {
     var inputName = $("input#name").val();
     var initialDeposit = parseInt($("input#startingAmount").val());
     var account = new BankAccount(inputName, initialDeposit);
-    console.log(account);
-    // account.newAccount();
-
-  //   $("p#result").text("name: " + account.name + ". Amount:" + account.currentAmount);
-  // });
-  $("p#result").text(account.inputName + account.initialDeposit);
+  
+  $("p.result").text("Thanks for setting up your account, " + account.name + ". " + "Your initial deposit of: $" + account.currentAmount + " has been received.");
 });
-//   $("form#modify-current-account").submit(function(event) {
-//     event.preventDefault();
-//     account.deposit(depositAmount);
-//   })
+  // $("form#modify-current-account").submit(function(event) {
+  //   event.preventDefault();
+  //     var inputName = $("input#name").val();
+  //     var initialDeposit = parseInt($("input#startingAmount").val());
+  //     var withdrawAmount = parseInt($('input#withdraw').val());
+  //     var depositAmount = parseInt($('input#deposit').val());
+  //     var account = new BankAccount(inputName, initialDeposit);
+  //   account.deposit(depositAmount);
+  //   $("p.result").text(account.name + " " + account.depositAmount);
+  // })
 });
 
 
